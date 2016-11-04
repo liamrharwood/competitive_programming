@@ -1,69 +1,68 @@
-#include <cstdio>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-unsigned int factorial(unsigned int n) 
-{
-    if (n == 0)
-       return 1;
-    return n * factorial(n - 1);
-}
-
 int main()
 {
-    int m, n, t;
+    int t;
+    long unsigned int m, n, ops;
     
-    scanf("%d %d %d", &m, &n, &t);
-    
+    cin >> m >> n >> t;
     switch(t) {
         case 1:
-            if(factorial(n) <= m) {
-                printf("AC");
-            } else {
-                printf("TLE");
+            ops = 1;
+            for(; n > 0; n--) {
+                ops *= n;
+                if(ops > m) {
+                    cout << "TLE" << endl;
+                    break;
+                }
+            }
+            if(ops <= m) {
+                cout << "AC" << endl;
             }
             break;
         case 2:
             if(pow(2, n) <= m) {
-                printf("AC");
+                cout << "AC" << endl;
             } else {
-                printf("TLE");
+                cout << "TLE" << endl;
             }
             break;
         case 3:
             if(pow(n, 4) <= m) {
-                printf("AC");
+                cout << "AC" << endl;
             } else {
-                printf("TLE");
+                cout << "TLE" << endl;
             }
             break;
         case 4:
             if(pow(n, 3) <= m) {
-                printf("AC");
+                cout << "AC" << endl;
             } else {
-                printf("TLE");
+                cout << "TLE" << endl;
             }
             break;
         case 5:
             if(pow(n, 2) <= m) {
-                printf("AC");
+                cout << "AC" << endl;
             } else {
-                printf("TLE");
+                cout << "TLE" << endl;
             }
             break;
         case 6:
             if(log2(n) * n <= m) {
-                printf("AC");
+                cout << "AC" << endl;
             } else {
-                printf("TLE");
+                cout << "TLE" << endl;
             }
             break;
         case 7:
             if(n <= m) {
-                printf("AC");
+                cout << "AC" << endl;
             } else {
-                printf("TLE");
+                cout << "TLE" << endl;
             }
             break;
     }

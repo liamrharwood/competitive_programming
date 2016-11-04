@@ -11,11 +11,11 @@ set<string> codomain;
 set<pair<string, string> > mappings;
 
 bool notAFunction () {
-	if(mappings)
+	for()
 }
 
 bool injective () {
-
+	for()
 }
 
 bool surjective () {
